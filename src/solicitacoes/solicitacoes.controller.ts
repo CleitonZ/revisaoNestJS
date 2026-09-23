@@ -43,4 +43,11 @@ export class SolicitacoesController {
   ) {
     return this.solicitacoesService.aprovar(id, dto.versao, request.user.id);
   }
+
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  @Roles('solicitante')
+  @Get('/centro-custo/:codigo')
+  buscarSaldo(@Param('id', ParseIntPipe) id: number) {
+    return this.solicitacoesService.buscarPorId(id);
+  }
 }

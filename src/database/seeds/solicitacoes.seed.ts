@@ -13,6 +13,16 @@ const dados = [
     centroCusto: 'TI-INFRA',
     prioridade: 'urgente' as const,
   },
+  {
+    titulo: 'Compra de equipamento',
+    centroCusto: 'TI-TESTE',
+    prioridade: 'normal' as const,
+  },
+  {
+    titulo: 'Aquisição de GPU',
+    centroCusto: 'TI-TESTE',
+    prioridade: 'urgente' as const,
+  }
 ];
 
 async function executar() {
